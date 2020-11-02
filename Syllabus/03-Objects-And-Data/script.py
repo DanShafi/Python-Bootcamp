@@ -82,3 +82,33 @@ result = 100/777
 print("The result was {r}".format(r=result))
 print("The result was {r:1.3f}".format(r=result))  # To round the float.
 print(f"The result was {result:1.3f}")
+
+# Lists
+
+my_list = [1, 2, 3]
+len(my_list)
+
+print(my_list[0])
+
+new_list = [4, 5, 6]
+print(my_list + new_list)  # Concating lists to merge
+
+new_list.append('7')
+print(new_list)
+new_list.pop()
+print(new_list)
+
+test_list = [1, 2, 3, 4, 5, 6]
+test_list.pop(4)
+print(test_list)
+
+to_sort_list = [4, 6, 7, 1, 16, 2]
+to_sort_list.sort()
+my_sorted_list = to_sort_list
+print(my_sorted_list)
+
+my_sorted_list.reverse()
+print(my_sorted_list)
+
+nested_list = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+print(nested_list[2][0])
