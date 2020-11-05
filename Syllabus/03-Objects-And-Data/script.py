@@ -112,3 +112,28 @@ print(my_sorted_list)
 
 nested_list = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 print(nested_list[2][0])
+
+# Dictionaries
+
+my_dictionary = {'key1': 'value1', 'key2': 'value2'}
+print(my_dictionary['key1'])
+
+price_lookup = {
+    'apple': 2.99,
+    'pear': 1.99
+}
+
+print(price_lookup['apple'])
+
+my_life = {
+    'name': 'Dan',
+    'age': '27',
+    'languages': {
+        'coding1': 'python',
+        'coding2': 'javascript',
+        'coding3': 'reactjs'
+    }
+}
+
+print(my_life['languages']['coding1'])
+print(my_life['languages']['coding3'].upper())  # Stack call
