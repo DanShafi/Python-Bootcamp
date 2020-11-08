@@ -137,3 +137,9 @@ my_life = {
 
 print(my_life['languages']['coding1'])
 print(my_life['languages']['coding3'].upper())  # Stack call
+
+# Tuples
+
+t = ('a', 'b', 'c')
+print(t.count('a'))
+print(t.index('c'))

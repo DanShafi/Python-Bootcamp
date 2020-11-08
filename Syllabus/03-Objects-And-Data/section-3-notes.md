@@ -87,3 +87,14 @@
 -   **You cannot make a dictionary have a variable name i.e.** `{my_life = {name: 'Dan')`. The `name` will throw an error as an undefined variable, so we have to put it in a string.
 -   If I want to see the keys or values in a Dictionary, I can use the following items: `dict.keys()`, `dict.values()` and `dict.items()`.
 -   If you want to keep the capabilities of a dictionary but would also like ordering, you can use the **ordereddict** object.
+
+**Tuples**
+
+-   Tuples are similar to lists - once an element is inside a tuple, it **cannot be muted**.
+-   Tuples use parentheses and commas but work similar to a list (array)
+-   You can always confirm what type something is by using `type()`.
+-   We can mix different object types, just like lists.
+-   We can also still use indexing and slicing like lists.
+-   A built in method we can use on tuples is `tuple.count(param)` which will count how many of the same iterations occur in that tuple. We can also use `tuple.index(param)` which will show us the index where the param first appears.
+-   Tuples do not allow item assignment so we cannot add something to a hardcoded tuple.
+-   The main advantage of using tuples over lists are to ensure that your objects do not accidentally get changed or overwritten/reassignments in your program.
