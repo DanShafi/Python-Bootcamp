@@ -98,3 +98,19 @@
 -   A built in method we can use on tuples is `tuple.count(param)` which will count how many of the same iterations occur in that tuple. We can also use `tuple.index(param)` which will show us the index where the param first appears.
 -   Tuples do not allow item assignment so we cannot add something to a hardcoded tuple.
 -   The main advantage of using tuples over lists are to ensure that your objects do not accidentally get changed or overwritten/reassignments in your program.
+
+**Sets**
+
+-   Sets are unordered collection of unique elements meaning that you cannot have different object types in them.
+-   Sets use { } so they look similar to dictionaries but they don’t use a key value syntax.
+-   To create a new set, you can use `variable = set()`. To add to the set we can call `myset.add(object)`. If we try to add the same object in I.e 2 and 2, the set won’t update. It has to be unique values only.
+-   A good use case for Set is to easily filter through a list to find only unique values. For example, if we had a list with `my_list = [1,1,1,1,2,2,2,2,3,3,3,3]` we can just call `set(my_list)` and this will return `{1, 2, 3}`.
+-   Sets don’t really have any order, they will just compile how it needs to.
+
+**Booleans**
+
+-   Operators that convey true and false. We use it check if a certain condition is true or false to execute or not execute a block of code.
+-   They are very important in control flow and logic.
+-   In Python, Booleans have to be capitalised I.e True or False. If it’s not capitalised, Python will think you’re calling a variable.
+-   The type in Boolean is just stated as bool.
+-   We can also use None as a placeholder until we update a variable after.

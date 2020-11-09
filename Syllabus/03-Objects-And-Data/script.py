@@ -143,3 +143,15 @@ print(my_life['languages']['coding3'].upper())  # Stack call
 t = ('a', 'b', 'c')
 print(t.count('a'))
 print(t.index('c'))
+
+# Booleans
+
+truthy = True
+falsy = False
+
+# Sets
+
+new_set = set([1, 2, 3])
+print(new_set)
+new_set.add(4)
+print(new_set)
