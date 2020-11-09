@@ -155,3 +155,13 @@ new_set = set([1, 2, 3])
 print(new_set)
 new_set.add(4)
 print(new_set)
+
+# I/O with Python
+
+myfile = open('test.txt')
+print(myfile.read())
+
+with open('test.txt') as my_new_file:
+    contents = my_new_file.read()
+
+with open('test.txt', )

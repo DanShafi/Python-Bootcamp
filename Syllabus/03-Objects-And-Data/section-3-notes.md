@@ -114,3 +114,24 @@
 -   In Python, Booleans have to be capitalised I.e True or False. If it’s not capitalised, Python will think you’re calling a variable.
 -   The type in Boolean is just stated as bool.
 -   We can also use None as a placeholder until we update a variable after.
+
+**I/O with Basic .txt files**
+
+-   To read .txt files in the Terminal, use the command `cat <path/your_file>`.
+-   \n means it's a new paragraph.
+-   If you try to myfile.read() twice, it will return blank quotes as the compiler will have parsed all the data. In order to reset this, you will need to run `myfile.seek(0)` and then you can run the read command again.
+-   This .txt allows you to convert a text file into a string, rather than hardcoding it.
+-   We can use `myfiles.readlines()` which puts the string into a list. If we have multiple lines separated by paragraphs, we'll have separate objects in the list which we can loop over should we wish.
+-   To open a .txt file from the IDE or in Python, we need to replace the / with \ as Python will assume that you're trying to escape the string.
+-   If you open a .txt file in Python, your computer will throw an error if you try to update/delete the file elsewhere. In order to terminate Python from still using this, we need to run the `myfile.close()` function.
+-   The new current way to the above is:
+
+    ```python
+    with open('myfile.txt') as my_new_file:
+    	contents = my_new_file.read()
+
+    # When we run this, we no longer need to worry about closing the file.
+    # We can then just use contents as the variable here.
+    ```
+
+-
