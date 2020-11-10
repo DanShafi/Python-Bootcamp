@@ -135,3 +135,6 @@
     ```
 
 -
+-   A second param in an open() is mode. We can use the `mode='w'` or `mode='r'` to write or read respectively. We can also use `mode='a'` which will append to files and we can use `mode='r+'` or `mode='w+'` which the latter will overwrite existing files or create a new file!
+-   If I continue to rerun the command in terminal, it will continue to execute meaning if you have a write function, it will keep running the function and keep adding to the list. **Beware of this.**
+-

@@ -1,1 +1,4 @@
 Hello, this is a text file.
+
+I've just added a new line.
+I've just added a new line.

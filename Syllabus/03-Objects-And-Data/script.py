@@ -161,7 +161,14 @@ print(new_set)
 myfile = open('test.txt')
 print(myfile.read())
 
-with open('test.txt') as my_new_file:
-    contents = my_new_file.read()
+with open('test.txt', mode='a') as myfile:
+    myfile.write('\nI\'ve just added a new line.')
 
-with open('test.txt', )
+with open('test.txt', mode='r') as myfile:
+    print(myfile.read())
+
+with open('tryingthewritemethod.txt', mode='w') as newfile:
+    newfile.write('I have just created this file using Python')
+
+with open('tryingthewritemethod.txt', mode='r') as newfile:
+    print(newfile.read())
