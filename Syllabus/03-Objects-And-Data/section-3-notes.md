@@ -1,3 +1,5 @@
+This section also contains Section 4 notes.
+
 **Basic Data Types**
 
 -   Lists are Python's version of arrays.
@@ -137,4 +139,13 @@
 -
 -   A second param in an open() is mode. We can use the `mode='w'` or `mode='r'` to write or read respectively. We can also use `mode='a'` which will append to files and we can use `mode='r+'` or `mode='w+'` which the latter will overwrite existing files or create a new file!
 -   If I continue to rerun the command in terminal, it will continue to execute meaning if you have a write function, it will keep running the function and keep adding to the list. **Beware of this.**
--
+-   **Comparison Operators**
+
+-   Python is case sensitive when it comes to checking equality. `'Bye' == 'bye'` will return false.
+-   Types are not equal in the same way either as in JavaScript i.e. `'2' == 2` in JS would be True as they are both the same output whereas in Python, this will always be fault. Python does not have a a `===` operator.
+-   They key logical operators in Python are `and`, `or` and `not`.
+-   You can put conditions in parentheses if it makes it easier to read the code.
+-   `and` needs both conditions to be true to work.
+-   `or` only needs one of the conditions to be true. If the first condition is true, it will not run the second the condition.
+-   `not` will return the opposite boolean. Basically a `!`.
+-   A use case for `not` is mainly for control flow.

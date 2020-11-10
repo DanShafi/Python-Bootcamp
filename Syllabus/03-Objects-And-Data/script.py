@@ -172,3 +172,26 @@ with open('tryingthewritemethod.txt', mode='w') as newfile:
 
 with open('tryingthewritemethod.txt', mode='r') as newfile:
     print(newfile.read())
+
+# Comparison Operators
+
+2 == 2
+2 == 1
+'hello' == 'bye'
+3 != 3
+4 != 4
+2 > 1
+1 < 2
+2 < 5
+2 >= 2
+4 <= 1
+
+# Chained comparison which states is 1 less than 2 and is 2 less than 3.
+1 < 2 < 3
+
+print(2 < 3 and 1 == 1)
+print(2 < 3 or 1 == 1)
+
+not 1 == 1
+# We can also write it like:
+not(1 == 1)
