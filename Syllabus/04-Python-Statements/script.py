@@ -62,3 +62,49 @@ d = {'k1': 1, 'k2': 2, 'k3': 3}
 for k, v in d.items():
     print(k)
     print(v)
+
+# While Loops
+
+x = 0
+while x < 5:
+    x += 1
+    print(f'The current value of x is {x}')
+else:
+    print('X is not less than 5')
+
+x = [1, 2, 3]
+for item in x:
+    pass
+
+mystring = 'Sammy'
+for letter in mystring:
+    if letter == 'a':
+        continue
+    print(letter)
+
+# Python Operators
+
+for num in range(0, 10, 2):
+    print(num)
+
+index_count = 0
+
+for letter in 'abcde':
+    print('At index {} the letter is {}'.format(index_count, letter))
+    index_count += 1
+
+word = 'abcde'
+
+for item in enumerate(word):
+    print(item)
+
+for item, letter in enumerate(word):
+    print(item)
+    print(letter)
+
+mylist1 = [1, 2, 3, 4, 5]
+mylist2 = ['a', 'b', 'c']
+mylist3 = [100, 200, 300]
+
+for item in zip(mylist1, mylist2, mylist3):
+    print(item)

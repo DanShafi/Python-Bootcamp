@@ -32,4 +32,44 @@ for item in my_iterable: #2
     ```
 
 -   In Dictionary iteration using a for loop, it will only return the keys. If you want to iterate through the values too, your for loop syntax needs to be as such: `for item in var.items()` - This will return tuples of the key value pair. We can then use tuple unpacking and amend our variable to include the key value items.
--
+-   **While Loops**
+
+-   While Loops will continue to execute a block of code **while** some condition remains `True`. It will only break when said condition has been met.
+-   Syntax: `while some_boolean_condition: #do something.`We can also combine an else statement to a while.
+-   Three useful keywords for loops are `break`, `continue` and `pass`. `break` will break out of the current closest enclosing loop. `continue` goes to the top of the closest enclosing loop and `pass` does nothing at all.
+-   EOF stands for End Of File.
+-   In a loop block, you cannot just use a comment or keep a block open without a code block, so we can just use `pass` . We can use this as a holder for a function that we may want to test later and this will avoid syntax errors.
+-   `continue` will tell the program to go back to the closest enclosing loop. That means once the condition has been called prior to the `continue`, it will then go back to the loop beginning and continue to run it from there:
+
+```python
+for letter in mystring:
+   if letter == 'a':
+      continue
+   print(letter)
+```
+
+-   `break` will stop the loop if the condition within the loop has been met. The output will just be any code before the the break condition.
+
+**Useful Operators**
+
+-   Instead of iterating through a range of numbers in a list stored in a variable, we can just use the `range()` syntax. For example:
+
+```python
+for num in range(10):
+	print(num)
+```
+
+-   In range, we can specify what range we want to iterate through for example `range(3,10)`. Remember, the last integer specified is not inclusive and will not be returned i.e. `range(10)` will return up until 9.
+-   We can also use a step size as a third argument. For example `range(0,10,2)` which will iterate through 0-10 and only return every other number in a step of 2.
+-   `range()` is what we call a **generator** - a special type of function which will generate information rather than saving it to memory.
+-   The `enumerate()` generator takes a variable argument for example a string of letters and allows you to index each iteration it outputs. This will generate tuples.
+-   A `zip()` generator will combine two or more lists together and output it as a tuple. Depending on which list is in the order in the args, Python will match each index and output. If one list is larger than the others, Python will immediately only run the zip function to the length with the shortest list. This is why tuple unpacking is important because most outputs in Python will be tuples.
+
+```python
+mylist1 = [1,2,3,4,5]
+mylist2 = ['a','b','c']
+mylist3 = [100,200,300]
+
+for item in zip(mylist1, mylist2, mylist3):
+	print(item)
+```
