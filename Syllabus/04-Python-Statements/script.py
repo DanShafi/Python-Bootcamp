@@ -1,3 +1,6 @@
+from random import shuffle
+from random import randint
+
 # If, Elif and Else Statements
 
 var = 2
@@ -108,3 +111,16 @@ mylist3 = [100, 200, 300]
 
 for item in zip(mylist1, mylist2, mylist3):
     print(item)
+
+mylist4 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+random_list = shuffle(mylist4)
+print(mylist4)
+
+print(randint(0, 100))
+my_num = randint(0, 100)
+print(my_num)
+
+result = input('What is your name? ')
+
+new_phrase = (f'Hello, {result}!')
+print(new_phrase)

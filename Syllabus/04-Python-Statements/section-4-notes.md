@@ -73,3 +73,21 @@ mylist3 = [100,200,300]
 for item in zip(mylist1, mylist2, mylist3):
 	print(item)
 ```
+
+-   We can use the `in` operator to check for a Boolean in a list. For example ‘x’ in [‘x’, ‘y’, ‘z’]
+-   We can also use this in a dictionary too and on strings.
+-   We can run this in a variable too, for example if we have a dictionary in a variable, we can just run ‘test’ in variable.keys() etc.
+-   The min max will report back the min and max in a list. We use min(args) or max(args).
+-   We can import the random built in library by calling `from random import shuffle`.
+-   Once we call the library and the method attached, we can call any method involved in that library.
+-   It's good practice to import libraries at the top of the document file.
+-   We can use `input()` to force Python to ask the user for an input:
+
+    ```python
+    result = input('What is your name? ')
+
+    new_phrase = (f'Hello, {result}!')
+    print(new_phrase)
+    ```
+
+-   Input always outputs everything as a string. If the input required needs to be an integer, we can convert this `str` to an `int` by passing the string result as a param for `int(param)`.
