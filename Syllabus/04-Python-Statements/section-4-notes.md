@@ -91,3 +91,23 @@ for item in zip(mylist1, mylist2, mylist3):
     ```
 
 -   Input always outputs everything as a string. If the input required needs to be an integer, we can convert this `str` to an `int` by passing the string result as a param for `int(param)`.
+
+**List Comprehensions**
+
+-   A unique way of quickly creating lists without adding a loop or having to append() into an empty list.
+-   Instead of writing a for loop as such:
+
+```python
+mystrings = 'hello'
+
+my_list = []
+for letter in mystring:
+    my_list.append(letter)
+
+# We can do this:
+
+my_new_list = [letter for letter in mystrings]
+```
+
+-   Essentially, we can run a for loop as a direct argument in the empty list. We can also append an if statement to the end of the first arg for example: `mymodlist = [num for num in range(0, 11) if x % 2 == 0]`
+-

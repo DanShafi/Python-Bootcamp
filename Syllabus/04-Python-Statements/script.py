@@ -71,7 +71,7 @@ for k, v in d.items():
 x = 0
 while x < 5:
     x += 1
-    print(f'The current value of x is {x}')
+    print('The current value of x is {x}')
 else:
     print('X is not less than 5')
 
@@ -120,7 +120,21 @@ print(randint(0, 100))
 my_num = randint(0, 100)
 print(my_num)
 
-result = input('What is your name? ')
+# result = input('What is your name? ')
 
-new_phrase = (f'Hello, {result}!')
-print(new_phrase)
+# new_phrase = ('Hello, {result}!')
+# print(new_phrase)
+
+# List Comprehensions
+
+mystrings = 'hello'
+
+my_list = []
+for letter in mystring:
+    my_list.append(letter)
+
+my_new_list = [letter for letter in mystrings]
+print(my_new_list)
+
+mynumlist = [num**2 for num in range(0, 11)]
+mymodlist = [num for num in range(0, 11) if x % 2 == 0]
