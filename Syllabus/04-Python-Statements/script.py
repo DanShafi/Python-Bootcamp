@@ -127,14 +127,63 @@ print(my_num)
 
 # List Comprehensions
 
-mystrings = 'hello'
+# mystrings = 'hello'
 
-my_list = []
-for letter in mystring:
-    my_list.append(letter)
+# my_list = []
+# for letter in mystring:
+#     my_list.append(letter)
 
-my_new_list = [letter for letter in mystrings]
-print(my_new_list)
+# my_new_list = [letter for letter in mystrings]
+# print(my_new_list)
 
-mynumlist = [num**2 for num in range(0, 11)]
-mymodlist = [num for num in range(0, 11) if x % 2 == 0]
+# mynumlist = [num**2 for num in range(0, 11)]
+# mymodlist = [num for num in range(0, 11) if x % 2 == 0]
+
+# celsius = [0, 10, 20, 34.5]
+# farenheit = [((9/5)*temp + 32) for temp in celsius]
+
+# farenheit = []
+# for temp in celsius:
+#     farenheit.append(((9/5)*temp + 32))
+
+# results = [x if x % 2 == 0 else 'Odd' for x in range(0, 11)]
+
+# newlist = []
+# for x in [2, 4, 6]:
+#     for y in [100, 200, 300]:
+#         newlist.append(x*y)
+
+# Module Tests
+
+st = 'Print only the words that start with s in this sentence'
+st.split()
+
+for word in st.split():
+    if word[0].lower() == 's':
+        print(word)
+
+test = list(range(0, 11, 2))
+print(test)
+
+divisable = [x for x in range(1, 51) if x % 3 == 0]
+print(divisable)
+
+evenst = 'Print only the words that start with s in this sentence'
+
+for word in evenst.split():
+    if len(word) % 2 == 0:
+        print(word + ' is even!')
+
+for num in range(1, 101):
+    if num % 3 == 0 and num % 5 == 0:
+        print('FizzBuzz')
+    elif num % 3 == 0:
+        print('Fizz')
+    elif num % 5 == 0:
+        print('Buzz')
+    else:
+        print(num)
+
+firstst = 'Print only the words that start with s in this sentence'
+stsplit = [word[0] for word in firstst.split()]
+print(stsplit)

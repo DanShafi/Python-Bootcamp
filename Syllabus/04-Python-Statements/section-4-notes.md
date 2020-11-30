@@ -32,7 +32,8 @@ for item in my_iterable: #2
     ```
 
 -   In Dictionary iteration using a for loop, it will only return the keys. If you want to iterate through the values too, your for loop syntax needs to be as such: `for item in var.items()` - This will return tuples of the key value pair. We can then use tuple unpacking and amend our variable to include the key value items.
--   **While Loops**
+
+**While Loops**
 
 -   While Loops will continue to execute a block of code **while** some condition remains `True`. It will only break when said condition has been met.
 -   Syntax: `while some_boolean_condition: #do something.`We can also combine an else statement to a while.
@@ -110,4 +111,24 @@ my_new_list = [letter for letter in mystrings]
 ```
 
 -   Essentially, we can run a for loop as a direct argument in the empty list. We can also append an if statement to the end of the first arg for example: `mymodlist = [num for num in range(0, 11) if x % 2 == 0]`
--
+-   Always opt for cleaner code rather than trying to over refactor, as it makes it harder for you to read down the line and harder for others.
+-   This is how we include if/else statement:
+
+```python
+results = [x if x % 2 == 0 else 'Odd' for x in range(0, 11)]
+```
+
+-   We can run a nested for loop like this:
+
+```python
+newlist = []
+for x in [2, 4, 6]:
+    for y in [100, 200, 300]:
+        newlist.append(x*y)
+```
+
+**Module Assessments**
+
+-   If we use `.split()` on a string, it will split the string at the whitespace and put it in a list.
+-   We can then use a for loop against the split to convert the list back into a string.
+-   If we want to print out even numbers in a range, we can just do `var = list(range(0,11,2))` which will return the numbers 0 to 10 and a **step size** of 2, meaning return every other number.
