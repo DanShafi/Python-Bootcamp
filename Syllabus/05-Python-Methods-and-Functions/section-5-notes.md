@@ -53,4 +53,59 @@ def check_even_list(num_list):
 
 **Tuple Unpacking with Functions**
 
--
+-   With standard tuple unpacking, we can just run a for loop for the key value object.
+-   We can create functions that can do the tuple unpacking for us - imagine a scenario where we have a subset of data that we want to compare against, i.e. employee of the month who has worked the longest number of hours. It could look something like this:
+
+```python
+def employee_month(work_hours):
+
+    current_max = 0
+    employee_of_the_month = ''
+
+    for employee,hours in work_hours:
+        if hours > current_max:
+            current_max = hours
+            employee_of_the_month = employee
+        else:
+            pass
+
+    return (f'Employee of the month is {employee_of_the_month} having worked {current_max} hours!')
+```
+
+-   If you try to unpack more tuples than they are in a function call, you will get a ValueError. Best way to check is assign all values to a single variable and then review how many values you have.
+
+**Interactions between Python Functions**
+
+-   Typically a python script contains several functions interacting with other.
+-   Remember, we can import libs in order to help us carry out basic methods, i.e. shuffle etc.
+-   We can't store the shuffle method in a variable, we have to create a function to do this.
+-   In a .py file, it's good convention to keep all your functions at the top.
+
+**\*Args & **Kwargs in Python\*\*
+
+-   Arguments and **keyword arguments**.
+-   We can use \*args to take an arbitrary number of arguments in a function. For example:
+
+```python
+def myfunc(*args):
+	return sum(args) * 0.05
+```
+
+-   This way, we can continue to add arguments to our liking without having to define a pre-approved numbers of params.
+-   We don't need to use the word _args_, we can replace this with anything as long as it follows the same convention with the asterisk. However, by convention its good to just use \*args.
+-   \*args always returns a tuples.
+-   \*\*kwargs builds and always returns a dictionary of k,v pairs.
+
+```python
+def myfunc(**kwargs):
+	if 'fruit' in kwargs:
+		print('My fruit of choice is {}'.format(kwargs['fruit']))
+	else:
+		print('I did not find any fruit here')
+
+myfunc(fruit='apple', veggie='lettuce')
+
+# Output: My fruit of choice is apple.
+```
+
+-   A function can accept both \*args and \*\*kwargs together. However, we need to ensure that we only call the right args depending on the position they have been set, or Python will throw an error.

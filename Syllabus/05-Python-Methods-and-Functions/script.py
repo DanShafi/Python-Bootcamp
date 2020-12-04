@@ -38,3 +38,5 @@ mylist = [' ', 'O', ' ']
 mixedup_list = shuffle_list(mylist)
 guess = player_guess()
 check_guess(mixedup_list, guess)
+
+# *args and **kwargs
