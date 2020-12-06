@@ -123,3 +123,50 @@ def myfunc(x):
         else:
             out.append(x[i].upper())
     return ''.join(out)
+
+# Function Practice Exercises
+
+
+"""
+Write a function that returns the lesser of two given numbers if both numbers are even, but returns the greater if one or both numbers are odd
+"""
+
+
+def lesser_of_two_evens(x, y):
+    if x and y % 2 == 0:
+        if x < y:
+            return x
+        else:
+            return y
+    else:
+        if x > y:
+            result = x
+        else:
+            result = y
+
+    return result
+
+
+"""
+Write a function that takes a two-word string and returns True if both words being with the same letter
+"""
+
+
+def animal_crackers(str):
+
+    sp1, sp2 = str.split()
+
+    if sp1[0] == sp1[0]:
+        return True
+    else:
+        return False
+
+
+"""
+Write a function that when given two integers, return True if their sum is 20 or if one 
+integer is 20. If not, return False
+"""
+
+
+def makes_twenty(n1, n2):
+    return n1+n2 == 20 or n1 == 20 or n2 == 20
