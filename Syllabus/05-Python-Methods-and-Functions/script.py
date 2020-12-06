@@ -170,3 +170,22 @@ integer is 20. If not, return False
 
 def makes_twenty(n1, n2):
     return n1+n2 == 20 or n1 == 20 or n2 == 20
+
+# Level One Problem Sets
+
+
+"""
+Write a function that capitalizes the first and fourth letters of a name
+"""
+
+
+def first_and_fourth(name):
+
+    s = list(name)
+    s[0] = s[0].upper()
+    s[3] = s[3].upper()
+
+    return "".join(s)
+
+
+print(first_and_fourth('macdonald'))
