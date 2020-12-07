@@ -189,3 +189,43 @@ def first_and_fourth(name):
 
 
 print(first_and_fourth('macdonald'))
+
+
+"""
+Write a function that takes in a string and reverses it's order like Yoda
+"""
+
+
+def master_yoda(phrase):
+
+    li = list(phrase.split(" "))
+    li.reverse()
+
+    return ' '.join(li)
+
+
+print(master_yoda('We Are Ready'))
+
+
+# Level Two Problem Sets
+
+
+"""
+Given an integer n, write a function that returns True if n is within 10 of either
+100 or 200.
+"""
+
+
+def almost_there(n):
+    if n in range(90, 101) or n in range(190, 201):
+        return True
+    elif n in range(100, 111) or n in range(200, 211):
+        return True
+    else:
+        return False
+
+
+print(almost_there(205))
+print(almost_there(89))
+print(almost_there(56))
+print(almost_there(93))
