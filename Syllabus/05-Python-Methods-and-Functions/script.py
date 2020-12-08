@@ -308,3 +308,56 @@ def summer_69(arr):
                 break
 
     return total
+
+
+# Challenge Problems
+
+"""
+Write a function that takes a list of integers and returns True if it contacts
+007 in order or unordered in a list.
+"""
+
+
+def spy_game(nums):
+
+    code = [0, 0, 7, 'x']
+
+    for num in nums:
+        if num == code[0]:
+            code.pop(0)
+
+    return len(code) == 1
+
+
+"""
+Write a function that returns the number of prime numbers that exist
+up to and including a given number
+"""
+
+
+def count_primes(num):
+
+    # Check for 0 or 1 input
+    if num < 2:
+        return 0
+
+    # 2 or greater
+
+    # Store our prime numbers
+    primes = [2]
+    # Conter going up to input num
+    x = 3
+
+    # X is going through every number up to input num
+    while x <= num:
+        # Check if x is prime
+        for y in range(3, x, 2):
+            if x % y == 0:
+                x += 2
+                break
+        else:
+            primes.append(x)
+            x += 2
+
+    print(primes)
+    return len(primes)
