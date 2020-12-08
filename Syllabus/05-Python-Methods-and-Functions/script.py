@@ -206,10 +206,6 @@ def master_yoda(phrase):
 
 print(master_yoda('We Are Ready'))
 
-
-# Level Two Problem Sets
-
-
 """
 Given an integer n, write a function that returns True if n is within 10 of either
 100 or 200.
@@ -229,3 +225,58 @@ print(almost_there(205))
 print(almost_there(89))
 print(almost_there(56))
 print(almost_there(93))
+
+# Level Two Problem Sets
+
+"""
+Given a list of ints, return True if the array contains a 3 next to a 3 somewhere.
+"""
+
+# Check if the array has a 3 in the first place.
+# Check that position of +1 and -1 index is a 3
+# Return True if this condition is met
+
+
+def find_33(nums):
+
+    for i in range(0, len(nums)-1):
+        if nums[i] == 3 and nums[i+1] == 3:
+            return True
+
+    return False
+
+
+print(find_33([1, 2, 3, 3]))
+
+
+"""
+Given a string, return a string where each character is repeated 3 times
+"""
+
+
+def paper_doll(text):
+    result = ''
+
+    for char in text:
+        result += char*3
+
+    return result
+
+
+"""
+Given three integers between 1 and 11, if their sum is less than or equal to 21
+return their sum. If their sum exceeds 21 and there's an eleven, reduce the total
+sum by 10. Finally, if the sum exceeds 21, return 'BUST'
+"""
+
+
+def blackjack(a, b, c):
+
+    sum = a+b+c
+
+    if sum <= 21:
+        return (f'Your total is {sum}.')
+    elif 11 in [a, b, c] and sum <= 31:
+        return sum - 10
+    else:
+        return 'BUST'
