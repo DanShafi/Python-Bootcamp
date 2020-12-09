@@ -109,3 +109,48 @@ myfunc(fruit='apple', veggie='lettuce')
 ```
 
 -   A function can accept both \*args and \*\*kwargs together. However, we need to ensure that we only call the right args depending on the position they have been set, or Python will throw an error.
+
+**Lambda Expressions, Map and Filter Functions**
+
+-   Lambda expressions are quick anonymous one-time functions. You reference them once and never really use them again.
+-   `map` expects a function.
+-   The params here are the function you want to map to the variable you want it to map to. You have to use a for loop to do this.
+-   When we pass in a function to map, we don't use the parentheses. Python will infer you're calling a function and invoke it for you.
+-   Map will iterate and return the boolean value of everything it is checking. Filter however, will only return the values that the filter function has accepted.
+
+```python
+def check_even(num):
+    return num % 2 == 0
+
+mynums = [1, 2, 3, 4, 5, 6]
+
+for n in map(check_even, mynums):
+    print(n)
+
+for n in filter(check_even,mynums):
+    print(n)
+
+# Map Output: False, True, False, True, False, True
+# Filter Output: 2,4,6
+```
+
+-   Filter has to also return a boolean. But, if we just try to run the filter or map on its own, it will return the space allocated for its memory.
+-   Lambda expressions can have functions be converted into them.
+
+```python
+def square(num):
+	result = num ** 2
+	return result
+
+# Converted into lambda
+
+lambda num: num**2
+```
+
+-   `lambda`'s are essentially anon functions that are used once. We don't invoke or write a `return` statement because by convention, a lambda will always return the code block.
+-   We can assign a lambda to a variable, filter and map functions:
+
+```python
+list(map(lambda num:num**2,mynums))
+list(filter(lambda num:num%2 == 0, mynums))
+```

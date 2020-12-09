@@ -361,3 +361,27 @@ def count_primes(num):
 
     print(primes)
     return len(primes)
+
+# Map & Filter Functions
+
+
+def check_even(num):
+    return num % 2 == 0
+
+
+mynums = [1, 2, 3, 4, 5, 6]
+
+list(filter(check_even, mynums))
+
+for n in map(check_even, mynums):
+    print(n)
+
+# Lambda Expressions
+
+
+def square(num):
+    result = num**2
+    return result
+
+
+lambda num: num**2
