@@ -154,3 +154,33 @@ lambda num: num**2
 list(map(lambda num:num**2,mynums))
 list(filter(lambda num:num%2 == 0, mynums))
 ```
+
+**Nested Statements and Scope**
+
+-   Python has a set or rules on which variables are being called. Python follows the **L E G B format:**
+    1. **L - Local:** Variable names assigned within a function.
+    2. **E - Enclosing function locals:** Names in the local scope of any and all enclosing funcs.
+    3. **G - Global:** Names assigned at the top-level of a module file and declared global in a def.
+    4. **B - Built In:** Names pre-assigned in the built-in names module: open, range, SyntaxError
+-   The only level above global are built-in for example `len`.
+-   To reassign a global variable, in our function we will use the `global` keyword. We call the variable we want and then it tells Python that you want to change the global variable locally.
+
+```python
+x = 50
+print(x)
+# Output 50
+
+def func():
+    global x
+
+    x = 200
+    print(f'I just locally changed my global X variable to {x}')
+
+func()
+# Output 200
+
+print(x)
+# Output 200 - Destructive reassignment
+```
+
+-   In general, this is not recommended unless absolutely necessary. If we want to manipulate the global variable, we should take it in as a param and do the reassignment locally and return the reassigned value. We can then assign the function to the global value again.
