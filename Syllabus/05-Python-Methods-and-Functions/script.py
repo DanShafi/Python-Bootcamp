@@ -385,3 +385,43 @@ def square(num):
 
 
 lambda num: num**2
+
+# Nested Statements and Scopes
+
+# GLOBAL
+name = 'IM A GLOBAL'
+
+
+def greet():
+    # ENCLOSING
+    name = 'IM AN ENCLOSING'
+
+    def hello():
+        # LOCAL
+        name = 'IM A LOCAL'
+        print('Hello ' + name)
+
+    hello()
+
+
+greet()
+
+# Global Reassignment
+
+x = 50
+print(x)
+# Output 50
+
+
+def func():
+    global x
+
+    x = 200
+    print(f'I just locally changed my global X variable to {x}')
+
+
+func()
+# Output 200
+
+print(x)
+# Output 200 - Destructive reassignment
