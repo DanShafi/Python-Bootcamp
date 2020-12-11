@@ -425,3 +425,62 @@ func()
 
 print(x)
 # Output 200 - Destructive reassignment
+
+
+# Methods and Functions Homework Tasks
+
+"""
+Write a function that computes the volume of a sphere given its radius
+"""
+
+
+def vol(rad):
+    return (4/3)*(3.14)*(rad**3)
+
+
+"""
+Write a function that checks weather a number is in a given range
+"""
+
+
+def ran_check(num, low, high):
+    if low <= num <= high:
+        print("This number is within range.")
+    else:
+        print("This number isn't within range.")
+
+
+"""
+Write a function that accepts a string and calculates the number
+of upper and lower case letter.
+"""
+
+
+def up_low(s):
+
+    upper = 0
+    lower = 0
+
+    for char in s:
+        if char.isupper():
+            upper += 1
+        elif char.islower():
+            lower += 1
+        else:
+            pass
+
+    return (f'This sentence has {upper} uppercase letters and {lower} lowercase letters.')
+
+
+"""
+Write a function that takes a list and returns a new list with unique
+elements of the first list
+"""
+
+
+def unique_list(lst):
+    return list(set(lst))
+
+
+print(unique_list([1, 2, 3, 4, 4, 4, 5, 5, 5,
+                   6, 6, 6, 7, 7, 7, 7, 8, 8, 9, 9, 9, 9]))
