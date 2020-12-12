@@ -1,0 +1,11 @@
+-   We need to have a visual representation that we want the user to see.
+-   We need to allow the user to make a decision and input the decision in order to execute a function that we have written, update a variable based on the input and this creates a new visual. This cycle can be continuous.
+-   There are many different ways of performing the same task in Python.
+-   The input function is the `input()` keyword and accepts a string. Input return types will always be a string. So if want the user to enter an integer, we can pass the result through `int(result)`.
+-   We can wrap an input function in an `int()` to force Python to parse the input string directly as an integer.
+-   We can add validation for user input.
+-   `input()` can break the program if the user does not enter an input. The rest of the program will not enter async, it will only continue until the input has been satisfied.
+-   If this happens, the only way to fix this is by restarting your kernel or interrupt the program. **Major bug if it happens in real life**.
+-   For validation, we can use `isdigit()` or `try` and `except`.
+-   `isdigit()` does not work for negative numbers, so only use this if you know you are using positive numbers. This method checks if a digit is in a string.
+-   Always try to assume what the user may input - think of all the possibilities and edge cases that may break your program.
