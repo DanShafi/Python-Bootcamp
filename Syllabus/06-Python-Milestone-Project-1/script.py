@@ -29,3 +29,39 @@ def user_choice():
 
 
 user_choice()
+
+
+"""
+Milestone Project 1: Create a simple game program.
+"""
+
+game_list = [0, 1, 2]
+
+
+def play_game():
+    print('Would you like to play a game? Y or N? ')
+    decision = input()
+    decision.upper()
+
+    if decision == 'y':
+        print('Welcome to the game!')
+        user_input()
+    elif decision == 'n':
+        print('Maybe next time!')
+    else:
+        print('That\'s not a valid selection.')
+
+
+def user_input():
+    print(f'This is the current list: {game_list}')
+    user_choice = input('What position would you like to replace? 0, 1 or 2? ')
+
+    if user_choice not in range(0, 3):
+        print('That is an invalid selection.')
+    else:
+        game_changer()
+
+    return int(user_choice)
+
+
+play_game()
