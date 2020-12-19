@@ -18,3 +18,10 @@ class NameOfClass():
 				# perform some action
 				print(self.param1)
 ```
+
+-   As a placeholder class, we can just use the `pass` keyword.
+-   Any function that runs inside a Class, is called a **method**.
+-   When we create a class, we always begin with a `def __init__(self)` - so we can always connect with the class.
+-   `__init__` is a constructor of the class. It will always get called automatically when an instance of the class has been generated.
+-   Attributes are _characteristics_ of the object. We tell Python that we want to create an instance of the object and have that instance being build on the attributes of the parent.
+-

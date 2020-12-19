@@ -7,3 +7,18 @@ class NameOfClass():
     def some_method(self):
         # perform some action
         print(self.param1)
+
+
+class Dog():
+
+    def __init__(self, mybreed, name):
+
+        self.breed = mybreed
+        self.name = name
+
+
+first_dog = Dog(mybreed='Pom', name='Bob')
+second_dog = Dog(mybreed='Lab', name='Leo')
+third_dog = Dog(mybreed='Jack Spaniel', name='Sammy')
+
+print(first_dog.breed)
