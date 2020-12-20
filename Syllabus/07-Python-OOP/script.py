@@ -11,6 +11,8 @@ class NameOfClass():
 
 class Dog():
 
+    species = 'mammal'
+
     def __init__(self, mybreed, name):
 
         self.breed = mybreed
