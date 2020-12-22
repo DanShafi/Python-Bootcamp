@@ -24,7 +24,14 @@ class NameOfClass():
 -   When we create a class, we always begin with a `def __init__(self)` - so we can always connect with the class.
 -   `__init__` is a constructor of the class. It will always get called automatically when an instance of the class has been generated.
 -   Attributes are _characteristics_ of the object. We tell Python that we want to create an instance of the object and have that instance being build on the attributes of the parent.
--   **OOP Part Two**
+
+**OOP Part Two**
 
 -   In an object, we can define a **class object attribute**. We define these **above** the `def __init__` and we don't need to call `self` on them because they will always be defined in the object.
 -   When we call the instance of the method, the **class object attribute** will always be present as part of the object/class. So if we call the instance of the object, we don't need to define it as a param.
+-   We know that the **class object attribute** will always be the same no matter what instance of the class, hence why we don't use the `self` keyword.
+-   Methods are functions defined in the body of the class → Important interview concept.
+-   Attributes never have `()` . Instead, they're characteristics of the class that you callback.
+-   When we're working with objects, we have to reference the instance of the object. So, if for example we're referencing a name in a string in an method, we won't use `.format(name)`, we have to use `.format(self.name)`.
+-   We can have more params for a method in an object. We provide the argument as usual like normal functions.
+-   We can reference the class name when calling the self.methods inside the `__init__` method. So, instead of self.pi, we can have Circle.pi
